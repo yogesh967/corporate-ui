@@ -1,0 +1,14 @@
+.post-div {
+  margin-left: 260px;
+  position: absolute;
+}
+
+.post-div th {
+  padding: 30px 10px !important;
+  width: 20% !important;
+}
+
+.post-div td {
+  padding: 30px 10px !important;
+  width: 50% !important;
+}

@@ -9,6 +9,8 @@ const MyProfile = () => {
     const [item, setItem] = useState({
         empName: "", empEmail: ""
     });
+
+    const [item2, setItem2] = useState(0);
     useEffect(() => {
         const id = localStorage.getItem("empid");
         console.log(localStorage.getItem("token"));
@@ -28,6 +30,35 @@ const MyProfile = () => {
             .catch((err) => {
                 console.log(err);
             });
+
+
+
+        return () => {
+
+        }
+    }, []);
+
+    useEffect(() => {
+        const id = localStorage.getItem("empid");
+        console.log(localStorage.getItem("token"));
+        let req = {
+            method: "get",
+            url: `http://localhost:8090/points/getpointsbyemp/${id}`,
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem("token")}`,
+                "Content-Type": "application/json",
+            }
+
+        }
+        axios(req)
+            .then((res) => {
+                setItem2(res.data);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+
+
 
         return () => {
 
@@ -78,7 +109,7 @@ const MyProfile = () => {
 
                         <tr>
                             <th scope="row">Points Gained</th>
-                            <td>Jacob</td>
+                            <td>{item2}</td>
                         </tr>
 
                     </tbody>

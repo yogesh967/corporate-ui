@@ -40,7 +40,7 @@ const OtherOffers = () => {
             <div className="offer-main-div">
                 <div className="container-fluid">
                     <div className="row">
-                        <div><h1 className='pl-4 pt-4 pb-3'>Other Offers</h1></div>
+                        <div><h1 className='pl-4 pt-4 pb-3'>Offers</h1></div>
 
                         <OfferCards item={item} />
                     </div>

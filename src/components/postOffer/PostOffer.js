@@ -2,26 +2,59 @@ import { Link } from "react-router-dom";
 import Navbar from "../navbar/Navbar";
 import Sidebar from "../sidebar/Sidebar";
 import "./post-style.css";
+import axios from "axios";
+
 
 const PostOffer = () => {
+    const id = localStorage.getItem("empid");
+    const postOffer = async (e) => {
+        e.preventDefault();
+        console.log(e.target);
+        let data = {
+            closedDate: e.target[2].value,
+            empId: id,
+            likes: 0,
+            offerCategory: {
+                offCategoryId: 121,
+                offCategoryName: e.target[3].value
+            },
+            offerName: e.target[0].value,
+            openedDate: e.target[1].value,
+        };
+        console.log(data);
+        axios.post("http://localhost:8003/offer/saveoffer", data, {
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem("token")}`,
+                "Content-Type": "application/json",
+            }
+        }).then((res) => {
+            console.log(res.data);
+        })
+
+    }
     return (
         <>
             <Navbar />
             <Sidebar />
             <div className="post-div pl-4">
                 <h1 className='pt-4 pb-3'>Post an Offer</h1>
-                <form action="#">
+                <form onSubmit={postOffer}>
                     <table class="table">
                         <tbody>
                             <tr className="form-group">
-                                <th>Name</th>
+                                <th>Offer Name</th>
                                 <td>
                                     <input type="text" class="form-control" id="offerName" placeholder="Enter offer name" required />
                                 </td>
                             </tr>
                             <tr className="form-group">
-                                <th>Description</th>
-                                <td><input type="text" class="form-control" id="desc" placeholder="Enter offer description" required /></td>
+                                <th>Open Date</th>
+                                <td><input type="date" class="form-control" id="open_date" required /></td>
+                            </tr>
+
+                            <tr className="form-group">
+                                <th>Close Date</th>
+                                <td><input type="date" class="form-control" id="close_date" required /></td>
                             </tr>
 
                             <tr className="form-group">

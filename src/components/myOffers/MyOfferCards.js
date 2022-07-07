@@ -22,11 +22,11 @@ const MyOfferCards = ({ item }) => {
                                     </div>
                                     <div className="card-text">
                                         <span className='font-weight-bold'>Engaged: </span>
-                                        {Val.openedDate}
+                                        Not yet
                                     </div>
                                     <div className="card-text">
                                         <span className='font-weight-bold'>Status: </span>
-                                        {Val.openedDate}
+                                        Open
                                     </div>
                                     <div className="card-text">
                                         <span className='font-weight-bold'>Category: </span>

@@ -23,7 +23,7 @@ const RecentLikedCards = ({ item }) => {
                                     <div className="card-text">
                                         <span className='font-weight-bold'>Engaged: </span>
                                         {Val.openedDate}
-                                    </div>.
+                                    </div>
 
                                     <div className="card-text">
                                         <span className='font-weight-bold'>Status: </span>
@@ -41,10 +41,6 @@ const RecentLikedCards = ({ item }) => {
                                     </div>
 
                                 </div>
-
-                                {/* <div className="card-footer text-center">
-                                    <Link to="/edit-myOffer" className='text-success'>Edit</Link>
-                                </div> */}
                             </div>
                         );
                     })}

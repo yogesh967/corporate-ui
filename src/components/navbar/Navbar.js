@@ -5,7 +5,7 @@ const Navbar = () => {
     return (
         <div className="header-main">
             <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
-                <a className="navbar-brand">Corporate Classifieds</a>
+                Corporate Classifieds
 
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
@@ -18,7 +18,7 @@ const Navbar = () => {
                     </li>
 
                     <li className="nav-item">
-                        <a className="nav-link" class="nav-link">Logout</a>
+                        <Link to="/login" class="nav-link">Logout</Link>
                     </li>
 
                 </ul>

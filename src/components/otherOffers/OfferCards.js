@@ -22,11 +22,11 @@ const OfferCards = ({ item }) => {
                                     </div>
                                     <div className="card-text">
                                         <span className='font-weight-bold'>Engaged: </span>
-                                        {Val.offerName}
+                                        Not yet
                                     </div>
                                     <div className="card-text">
                                         <span className='font-weight-bold'>Status: </span>
-                                        {Val.offerName}
+                                        Open
                                     </div>
                                     <div className="card-text">
                                         <span className='font-weight-bold'>Category: </span>
@@ -39,7 +39,7 @@ const OfferCards = ({ item }) => {
 
                                 </div>
                                 <div className="card-footer text-center">
-                                    <Link to="/view-otherOffer" className='text-primary'>Open</Link>
+                                    <Link to="/view-otherOffer" className='text-primary' state={Val}>Open</Link>
                                 </div>
                             </div>
                         );

@@ -5,7 +5,7 @@ const Header = () => {
         <div className="header-main bg-primary">
             <nav className="navbar navbar-expand-lg navbar-dark fixed-top bg-primary">
                 <div className="container">
-                    <a className="navbar-brand">Corporate Classifieds</a>
+                    Corporate Classifieds
 
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">

@@ -39,7 +39,7 @@ const OfferCards = ({ item }) => {
 
                                 </div>
                                 <div className="card-footer text-center">
-                                    <Link to="/view-otherOffer" className='text-primary' state={Val}>Open</Link>
+                                    <Link to="/view-otherOffer" className='text-primary' state={JSON.stringify(Val)}>Open</Link>
                                 </div>
                             </div>
                         );
